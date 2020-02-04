@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 120px auto;
+    grid-gap: 50px;
+    align-items: center;
+    color: white;
+    transition: 0.4s ease-in;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    margin-left: 10%;
+}
+
+.nav-links li{
+    display: inline;
+    padding: 20px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+.burger {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    display: none;
+    margin-right: 5%;
+}
+
+.burger div {
+    border: 1px solid white;
+    margin: 5px;
+    border-radius: 5px;
+    width: 20px;
+}
+
+.front-pic-wrapper {
+    overflow: hidden;
+}
+
+.front-pic {
+    width: 130%;
+    height: auto;
+}
+
+.front-pic-menu {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    color: white;
+    width: max-content;
+}
+
+.front-pic-menu h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.front-pic-menu p {
+    margin-top: 2%;
+}
+
+.front-pic-menu a {
+    text-decoration: none;
+    padding: 8px;
+    border: 2px solid white;
+    font-size: 16px;
+    color: white;
+    font-weight: normal;
+    margin-left: 50px;
+    letter-spacing: 0;
+}
+
+.front-price {
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.mobile-navbar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 90%;
+    width: 50%;
+    background-color: black;
+    transform: translateX(100%);
+    transition: 0.4s ease-in;
+}
+
+.mobile-navbar li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 20px 0;
+}
+
+.mobile-navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-active {
+    background-color: black;
+    transition: 0.4s ease-in;
+}
+
+.mobile-navbar-active {
+    transform: translateX(0%);
+}
+
+@media only screen and (max-width: 640px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .front-pic-menu {
+        top: 12%;
+    }
+
+    .front-pic-menu h1 {
+        font-size: 1.5rem;
+    }
+
+    .front-pic-menu p {
+        font-size: 1rem;
+    }
+    
+    .front-pic-menu a {
+        margin-left: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .front-pic-menu h1 {
+        font-size: 1rem;
+    }
+
+    .front-pic-menu p {
+        font-size: 0.8rem;
+    }
+
+    .front-pic-menu a {
+        margin-left: 20px;
+        font-size: 0.8rem;
+    }
+}
